@@ -49,17 +49,17 @@ crispy.addCliCommand("say", (args) => {
 
 function formatMessage(data) {
   const timestamp = data.timestamp.split("T");
-  const date = timestamp[0].split("-").slice(1).join("-");
-  const time = timestamp[1].split(".")[0];
+  // const date = timestamp[0].split("-").slice(1).join("-");
+  const time = timestamp[1].split(".")[0].split(":").slice(0,2).join(":");
   if (data.handle) {
     try {
       const color = data.color.replace("alt", "");
-      return chalk.keyword(color)(`[${date}  ${time}]  ${data.handle}: ${data.message}`);
+      return chalk.keyword(color)(`[${time}] ${data.handle}: ${data.message}`);
     } catch {
       throw new Error(`Unknown color ${data.color}`);
     }
   } else {
-    return chalk.keyword("gray")(`[${date}  ${time}]  ${data.message}`);
+    return chalk.keyword("gray")(`[${time}] ${data.message}`);
   }
 }
 
