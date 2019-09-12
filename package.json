@@ -1,0 +1,25 @@
+{
+  "name": "crispycli",
+  "version": "1.0.0",
+  "description": "Minimal installation of crispybot as a chat client.",
+  "main": "client.js",
+  "directories": {},
+  "scripts": {
+    "start": "node client.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sighmir/CrispyCLI.git"
+  },
+  "author": "Guilherme Caulada (Sighmir)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Sighmir/CrispyCLI/issues"
+  },
+  "homepage": "https://github.com/Sighmir/CrispyCLI#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "crispybot": "^3.3.1"
+  },
+  "devDependencies": {}
+}
